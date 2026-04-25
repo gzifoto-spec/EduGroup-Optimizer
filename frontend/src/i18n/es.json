@@ -1,0 +1,45 @@
+{
+  "app": {
+    "title": "EduGroup Optimizer",
+    "subtitle": "Optimización inteligente de grupos para el aula"
+  },
+  "nav": {
+    "students": "Alumnos",
+    "compatibility": "Compatibilidad",
+    "generateGroups": "Generar Grupos",
+    "history": "Historial"
+  },
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  },
+  "sidebar": {
+    "collapse": "Contraer",
+    "expand": "Expandir"
+  },
+  "pages": {
+    "students": {
+      "description": "Gestiona los alumnos y sus grupos de clase"
+    },
+    "compatibility": {
+      "description": "Define los niveles de compatibilidad entre alumnos"
+    },
+    "generateGroups": {
+      "description": "Genera grupos óptimos según compatibilidad e historial"
+    },
+    "history": {
+      "description": "Consulta el historial de sesiones de agrupamiento"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "confirm": "Confirmar",
+    "comingSoon": "Próximamente"
+  }
+}

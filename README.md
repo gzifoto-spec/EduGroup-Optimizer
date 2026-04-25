@@ -1,32 +1,47 @@
-Role: Senior Fullstack Developer & Architect.
-Project: "EduGroup Optimizer" – A web/mobile app for teachers to manage student grouping based on social compatibility and rotation.
+# EduGroup Optimizer
 
-Tech Stack:
+Intelligent classroom grouping tool that maximizes student compatibility and minimizes repeated pairings across sessions.
 
-    Backend: Java 21, Spring Boot 3.x, Maven, Spring Data JPA, PostgreSQL/H2.
+## Overview
 
-    Frontend: React (Vite), Tailwind CSS, Lucide Icons.
+EduGroup Optimizer helps educators create balanced student groups by tracking compatibility scores between students and rotation history. The algorithm ensures students with strong incompatibility (score ≤ −4) are never placed together, while maximizing overall group harmony and variety.
 
-Core Constraints:
+## Tech Stack
 
-    Clean Code: No comments unless strictly necessary for complex algorithms.
+- **Backend:** Java 21, Spring Boot 3.x, PostgreSQL (prod) / H2 (dev)
+- **Frontend:** React 18+, Vite, TypeScript, Tailwind CSS, shadcn/ui
 
-    Naming: All code (variables, classes, methods, DB tables) in English.
+## Project Structure
 
-    UI/UX: Interface must support Spanish (i18n ready). Use camelCase for JS/Java.
+```
+edugroup-optimizer/
+├── backend/          # Spring Boot API
+└── frontend/         # React + Vite SPA
+```
 
-    Styling: Use Tailwind CSS. Follow "Utility-first" patterns. (Optional: integrate shadcn/ui for accessible components).
+## Getting Started
 
-    Architecture: Decoupled. REST API with clear DTOs.
+### Backend
 
-Business Logic:
+```bash
+cd backend
+./mvnw spring-boot:run
+```
 
-    Compatibility Scale: -5 to +5.
+API runs on `http://localhost:8080`.
 
-    Hard constraint: Scores ≤−4 must NEVER be grouped.
+### Frontend
 
-    Objective: Maximize rotation history and overall group compatibility.
-    
-    
-    "Para los componentes de la interfaz, utiliza shadcn/ui y Tailwind CSS. Asegúrate de seguir las mejores prácticas de accesibilidad y diseño responsivo para que la app sea usable en tablets y móviles."
-# EduGroup-Optimizer
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+App runs on `http://localhost:5173`.
+
+## Business Rules
+
+- Compatibility scores range from **−5 to +5**.
+- Students with a score **≤ −4** are never placed in the same group.
+- Grouping algorithm prioritizes rotation history, then overall compatibility.
